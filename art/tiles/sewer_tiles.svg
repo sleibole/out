@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="192" viewBox="0 0 256 192">
+  <!-- 64 px tiles. Row 0: stone slab tops (left, mid, right). Row 1: stone bodies. Row 2: pipes (left cap, mid, right cap, mid collar). -->
+  <defs>
+    <g id="slab-left">
+      <rect x="10" y="30" width="54" height="34" fill="#56515C"/>
+      <rect x="10" y="32" width="54" height="8" fill="#45414B"/>
+      <rect x="8" y="30" width="3" height="34" fill="#1E1A22"/>
+      <path d="M64 0 H12 A12 12 0 0 0 0 12 V20 A12 12 0 0 0 12 32 H64 Z" fill="#1E1A22"/>
+      <path d="M64 3 H13 A10 10 0 0 0 3 13 V19 A10 10 0 0 0 13 29 H64 Z" fill="#8A8590"/>
+      <path d="M64 3 H13 A10 10 0 0 0 4 9 H64 Z" fill="#A7A2AD"/>
+      <path d="M64 22 H4 A10 10 0 0 0 13 29 H64 Z" fill="#6B6670"/>
+    </g>
+    <g id="body-left">
+      <rect x="10" y="0" width="54" height="64" fill="#56515C"/>
+      <rect x="8" y="0" width="3" height="64" fill="#1E1A22"/>
+    </g>
+    <g id="pipe-left">
+      <rect x="14" y="6" width="50" height="52" fill="#1E1A22"/>
+      <rect x="14" y="9" width="50" height="46" fill="#5A5560"/>
+      <rect x="14" y="9" width="50" height="8" fill="#8A8590"/>
+      <rect x="14" y="42" width="50" height="13" fill="#3F3B45"/>
+      <rect x="2" y="2" width="24" height="60" rx="5" fill="#1E1A22"/>
+      <rect x="5" y="5" width="18" height="54" rx="3" fill="#6B6670"/>
+      <rect x="5" y="5" width="18" height="7" fill="#8A8590"/>
+      <rect x="5" y="46" width="18" height="13" fill="#4A4652"/>
+    </g>
+  </defs>
+
+  <!-- Row 0: slab tops -->
+  <use href="#slab-left" x="0" y="0"/>
+  <g transform="translate(64 0)">
+    <rect x="0" y="30" width="64" height="34" fill="#56515C"/>
+    <rect x="0" y="32" width="64" height="8" fill="#45414B"/>
+    <rect x="0" y="0" width="64" height="32" fill="#1E1A22"/>
+    <rect x="0" y="3" width="64" height="26" fill="#8A8590"/>
+    <rect x="0" y="3" width="64" height="6" fill="#A7A2AD"/>
+    <rect x="0" y="22" width="64" height="7" fill="#6B6670"/>
+  </g>
+  <g transform="translate(192 0) scale(-1 1)">
+    <use href="#slab-left"/>
+  </g>
+
+  <!-- Row 1: stone bodies -->
+  <use href="#body-left" x="0" y="64"/>
+  <rect x="64" y="64" width="64" height="64" fill="#56515C"/>
+  <rect x="64" y="64" width="2" height="64" fill="#4A4652"/>
+  <g transform="translate(192 64) scale(-1 1)">
+    <use href="#body-left"/>
+  </g>
+
+  <!-- Row 2: pipes -->
+  <use href="#pipe-left" x="0" y="128"/>
+  <g transform="translate(64 128)">
+    <rect x="0" y="6" width="64" height="52" fill="#1E1A22"/>
+    <rect x="0" y="9" width="64" height="46" fill="#5A5560"/>
+    <rect x="0" y="9" width="64" height="8" fill="#8A8590"/>
+    <rect x="0" y="42" width="64" height="13" fill="#3F3B45"/>
+  </g>
+  <g transform="translate(192 128) scale(-1 1)">
+    <use href="#pipe-left"/>
+  </g>
+  <g transform="translate(192 128)">
+    <rect x="0" y="6" width="64" height="52" fill="#1E1A22"/>
+    <rect x="0" y="9" width="64" height="46" fill="#5A5560"/>
+    <rect x="0" y="9" width="64" height="8" fill="#8A8590"/>
+    <rect x="0" y="42" width="64" height="13" fill="#3F3B45"/>
+    <rect x="20" y="2" width="24" height="60" rx="5" fill="#1E1A22"/>
+    <rect x="23" y="5" width="18" height="54" rx="3" fill="#6B6670"/>
+    <rect x="23" y="5" width="18" height="7" fill="#8A8590"/>
+    <rect x="23" y="46" width="18" height="13" fill="#4A4652"/>
+  </g>
+</svg>

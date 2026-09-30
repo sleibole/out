@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/golden_plunger.gd" id="1_ymcw2"]
+[ext_resource type="PackedScene" path="res://scenes/objects/golden_plunger_rig.tscn" id="2_0rtmu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d317x"]
+radius = 40.0
+
+[node name="GoldenPlunger" type="Area2D" unique_id=647585455]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_ymcw2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=77896545]
+shape = SubResource("CircleShape2D_d317x")
+
+[node name="Rig" type="Node2D" parent="." unique_id=940717012 instance=ExtResource("2_0rtmu")]

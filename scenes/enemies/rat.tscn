@@ -1,0 +1,28 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/rat.gd" id="1_qn0ow"]
+[ext_resource type="PackedScene" path="res://scenes/enemies/rat_rig.tscn" id="2_l3lpa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_orb1r"]
+size = Vector2(76, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6756y"]
+size = Vector2(80, 54)
+
+[node name="Rat" type="CharacterBody2D" unique_id=1604206629]
+collision_layer = 4
+script = ExtResource("1_qn0ow")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1023265855]
+position = Vector2(0, -22)
+shape = SubResource("RectangleShape2D_orb1r")
+
+[node name="Rig" type="Node2D" parent="." unique_id=1149828073 instance=ExtResource("2_l3lpa")]
+
+[node name="Hurtbox" type="Area2D" parent="." unique_id=1322420415]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox" unique_id=1239153100]
+position = Vector2(0, -32)
+shape = SubResource("RectangleShape2D_6756y")

@@ -1,0 +1,18 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_dovo2"]
+[ext_resource type="PackedScene" path="res://scenes/player/player_rig.tscn" id="2_gmlin"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lvxji"]
+radius = 26.0
+height = 176.0
+
+[node name="Player" type="CharacterBody2D" unique_id=429831140]
+collision_layer = 2
+script = ExtResource("1_dovo2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=423775733]
+position = Vector2(0, -88)
+shape = SubResource("CapsuleShape2D_lvxji")
+
+[node name="Rig" type="Node2D" parent="." unique_id=909558434 instance=ExtResource("2_gmlin")]
